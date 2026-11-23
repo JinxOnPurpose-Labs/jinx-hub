@@ -1,0 +1,14 @@
+{
+  "pocketWild": {
+    "repository": "JinxOnPurpose-Labs/pocket-wild",
+    "revision": "e68a46ce0995747ae1cc81699e731fc1c7f9671c",
+    "files": {
+      "index.html": "b3e8f5956ae3ed5a314290d21ac223f022eab31ac16f0094cda488e66942e8a4",
+      "style.css": "c8d13d8dc0b32549913c067cc6527cf96a8ae3567e66ebc9dde77b4583af4d1c",
+      "icon.svg": "bb6ebd0302000d729ee6dfdb48819e5bd86e334b32eba8f5b9473b26733a31bd",
+      "src/main.js": "abddcd6ee05fb5f562c0f71d66d38bc1feb99161a2aa5dc35a7146f7aac20f7d",
+      "src/world.js": "9006a23707cced56747989c90b9155a5ba038ff93bb4244556e1c9d66207d085",
+      "src/render.js": "9b13f81a69c44dfd928d5b835dabebcbfd2bc17a999ab982acbd4da3049ee8f9"
+    }
+  }
+}
