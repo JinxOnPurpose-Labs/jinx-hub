@@ -6,9 +6,9 @@ import {fileURLToPath} from 'node:url';
 export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 export async function build(output=path.join(root,'dist')){
  const {pocketWild:p}=JSON.parse(await fs.readFile(path.join(root,'projects.json'),'utf8'));
- if(p.repository!=='JinxOnPurpose-Labs/pocket-wild'||!/^\w{40}$/.test(p.revision))throw Error('Invalid project identity/revision');
+ if(p.repository!=='JinxOnPurpose-Labs/pocket-wild'||!/^[a-f0-9]{40}$/.test(p.revision))throw Error('Invalid project identity/revision');
  const source=path.resolve(process.env.POCKET_WILD_DIR||path.join(root,'../pocket-wild'));
- const allowed=['index.html','style.css','icon.svg','src/main.js','src/world.js','src/render.js'];
+ const allowed=['index.html','style.css','icon.svg','src/main.js','src/world.js','src/render.js','src/studio.js'];
  if(Object.keys(p.files).sort().join()!==allowed.sort().join())throw Error('Unexpected game file list');
  // Read committed bytes only. Never execute the game, copy its whole repository, or include dirty work.
  const game=[];for(const file of allowed){const bytes=execFileSync('git',['-C',source,'show',`${p.revision}:${file}`],{maxBuffer:1024*1024});if(createHash('sha256').update(bytes).digest('hex')!==p.files[file])throw Error(`Game digest mismatch: ${file}`);game.push([file,bytes]);}
