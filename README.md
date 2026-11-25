@@ -5,7 +5,7 @@ A small dark project hub at https://jinx.xanderxx.xyz/. Pocket Wild is the first
 ## What is here
 
 - `/`: the dark, responsive project hub. Only Pocket Wild is currently listed.
-- `/pocket-wild/`: the independently maintained [Pocket Wild](https://github.com/JinxOnPurpose-Labs/pocket-wild) browser game, dark UI, unchanged simulation and save schema.
+- `/pocket-wild/`: the independently maintained [Pocket Wild](https://github.com/JinxOnPurpose-Labs/pocket-wild) browser game, dark UI, terrarium tools and optional-field-compatible v1 local saves.
 - The slashless `/pocket-wild` redirects to `/pocket-wild/`. Unknown paths return a real 404, not the game or a pretend success page.
 
 The hub has no JavaScript, analytics, forms, cookies, account system, fonts from third parties or database. Images are local, including Jinx’s original cat avatar and an original pixel meadow illustration. The game executes locally and uses browser-local storage, with no gameplay requests. Cloudflare still handles normal hosting traffic under its own policies. There are no application world uploads or cross-domain save transfers.
@@ -25,7 +25,7 @@ npm audit --audit-level=high
 python3 -m http.server 4178 --bind 127.0.0.1 --directory dist
 ```
 
-`POCKET_WILD_DIR` can point to a different local clone. `projects.json` pins a full source revision plus SHA-256 hashes for exactly six public game files. The build reads those committed blobs, not the working tree, and fails before replacing output if a source/digest is wrong. It copies only `public/` and those explicit game files into generated `dist/`. No repository metadata, developer tools, credentials or private workspace files are published. CI independently checks out the pinned revision and builds/tests without secrets or deployment permission. When updating the pin, update the CI checkout `ref` too.
+`POCKET_WILD_DIR` can point to a different local clone. `projects.json` pins a full source revision plus SHA-256 hashes for exactly seven public game files. The build reads those committed blobs, not the working tree, and fails before replacing output if a source/digest is wrong. It copies only `public/` and those explicit game files into generated `dist/`. No repository metadata, developer tools, credentials or private workspace files are published. The explicit `src/studio.js` addition contains deterministic presets/seeds, paused history and local slots, not network/account code. Old local worlds stay on their original origin; see the game README for migration/slots/seed/history behavior. Run both game browser checkers (`scripts/browser-check.mjs` and `scripts/terrarium-check.mjs`) against the real subpath after deployment. CI independently checks out the pinned revision and builds/tests without secrets or deployment permission. When updating the pin, update the CI checkout `ref` too.
 
 Optional external browser tooling, never installed or shipped by the game:
 

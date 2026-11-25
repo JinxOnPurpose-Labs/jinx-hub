@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: JinxOnPurpose-Labs/pocket-wild
-          ref: e68a46ce0995747ae1cc81699e731fc1c7f9671c
+          ref: 235c590ca4d701bd71a6de4697de73a794b3da53
           path: _sources/pocket-wild
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
