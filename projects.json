@@ -1,14 +1,14 @@
 {
   "pocketWild": {
     "repository": "JinxOnPurpose-Labs/pocket-wild",
-    "revision": "fb5a3291920efd4afd746066907f7627150aa54b",
+    "revision": "235c590ca4d701bd71a6de4697de73a794b3da53",
     "files": {
       "index.html": "7cd97d4ad1ce5d00472f94ff899916ae692c420c265efc560188e78ae35ee8be",
       "style.css": "05ca753de49db4ee035946aa485a82b827fabe6cf0e8cefe2b14a26b0c33d5ca",
       "icon.svg": "bb6ebd0302000d729ee6dfdb48819e5bd86e334b32eba8f5b9473b26733a31bd",
-      "src/main.js": "6b78cac1441176acb5e84a1ed85a5cac7e74ff02095d1ea6aa539afa139b55d4",
+      "src/main.js": "ef4b9ca580ee8875f0c2e3db9b0dd14f03d362c795656ea90b55da5319705259",
       "src/world.js": "2eedda5c868b60f4ffc8dfbcbfcdbbb93fe093720ad36ca51fda7a3986a839d7",
-      "src/render.js": "e2a1cb4b388e985966712b87c7693b2eea1e512bb2262e2e1ebd2cdfa08e5665",
+      "src/render.js": "7264dcea3a59493a7a9c568e92060190e9ddc56082e812668c1bd5c6c73264b4",
       "src/studio.js": "c62788f392dd28dbda7f01c2f3b0a85140c9851ce8e29618d984f9c7e1ae4e70"
     }
   }
